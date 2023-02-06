@@ -8,7 +8,7 @@ $path 		= Get-Location
 $file 		= "" + $path + "\versions.csv"
 start-bitstransfer "https://forum.1163.ru/launcher/versions.csv" -destination $file
 $trys		= 0
-$copyright  = "Author: Alexander Kuprin. Project: NETOnline - 2023"
+$copyright  = "Author: Alexander Kuprin. Project: NET Online - 2023"
 Write-Host $copyright -ForegroundColor gray
 if(Test-Path $file){
 	$versions	= Import-Csv $file -Delimiter ";"
