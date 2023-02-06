@@ -41,15 +41,17 @@ if(Test-Path $file){
 			$tmp = ""+$path+$zip
 			$result = Test-Path $tmp
 			if($result -eq $false){
-				start-bitstransfer $link -destination $path
+				start-bitstransfer $link -destination $tmp
 			}
 			Write-Host $tmp
 			if(Test-Path $tmp){
 				if(checksum $link $tmp $true){
-					Expand-Archive -Path $tmp -Destination $path -Force
+					$dir = [System.IO.Path]::GetDirectoryName($tmp)
+					Expand-Archive -Path $tmp -Destination $dir -Force
 				}
 				else{
-					Write-Host "ERs"
+					$tmp = "[ERROR] Checksum - "+$file
+					Write-Host $tmp -ForegroundColor red
 					Remove-Item -Path $tmp
 				}
 			}
@@ -66,7 +68,8 @@ if(Test-Path $file){
 			Write-Host $tmp -ForegroundColor Blue
 			$i = 0
 			foreach($file in $files){
-				$tmp = "" + $path + "\" + $file
+				$dir = [System.IO.Path]::GetDirectoryName($zip)
+				$tmp = "" + $path + "\" + $dir + "\" + $file
 				if(Test-Path $tmp){
 					if(checksum $hash[$i] $tmp){
 						$tmp = "[OK] Checksum - "+$file
