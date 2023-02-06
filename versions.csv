@@ -1,2 +1,4 @@
 Version;Files;Hash;Link;Zip
-17.3c2;xpatch_01.db xpatch_02.db;FC61DD3E648333D1C1133DDE787C624EC4CFBAC64912876C3FC5F80B5AB883BD B74C6293BAA71A0CF5AEC9B63A98C1F10B2009493E1F8131DCFAB0178107A6CC; https://github.com/hkuprin/files/raw/main/17.3c1.zip; \17.3c1.zip
+17.3c1;xpatch_09.db;16C821F77C3DA41161AAECC723F564B5D6534CEA0928CB94324D1DD20D110590; https://github.com/VodkaNET/stnet-17-patches/raw/main/zip/17.3c1.zip; \patches\17.3c1.zip
+17.3c1h1;xpatch_10.db;1DB7E3CFA3CA5594E1DFF5FBFCC85F6FCC8A1F0516DA9E1392126696451957DE; https://github.com/VodkaNET/stnet-17-patches/raw/main/zip/17.3c1h1.zip; \patches\17.3c1h1.zip
+17.3czaton;zaton.db;C0B1B6543BA46D6AA67A835E4C93782E67B9752BFCC1B151038B3E3482AB7A9F; https://github.com/VodkaNET/stnet-17-patches/raw/main/zip/zaton.zip; \mp\zaton.zip
